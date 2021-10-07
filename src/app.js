@@ -35,7 +35,6 @@ export default class App extends Component {
         } else if(textArr[key] === char.value) {
           let res;
           if(types === 'enc') {
-            console.log(`${char.key} - ${Number(this.state.key)} % 26`)
             res = (char.key + Number(this.state.key)) % 26;
           } else if(types === 'dec') {
             if((char.key - Number(this.state.key)) % 26 < 0) {
@@ -45,7 +44,6 @@ export default class App extends Component {
               res = (char.key - Number(this.state.key)) % 26;
             }
           }
-          console.log(abjad[res], "ABJAD RES")
           let encFinal = abjad[res].value;
           arrResult.push(encFinal);
         }
@@ -62,7 +60,6 @@ export default class App extends Component {
   _handleClickEnc = (e) => {
     e.preventDefault();
 
-    this._logicEncDec('enc');
     this.setState({
       keyResult: this.state.key,
       textResult: this.state.text,
@@ -128,6 +125,9 @@ export default class App extends Component {
                 <p>{result === '-'  ? '-' : result.join('').toUpperCase()}</p>
               </div>
             </div>
+          </div>
+          <div className="copy">
+            <p>Copyright 2021. Aziz Nur Abdul Qodir, All Right Reserved.</p>
           </div>
         </div>
       </React.Fragment>
