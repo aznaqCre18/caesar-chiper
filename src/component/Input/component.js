@@ -4,7 +4,7 @@ function Input({label, placeholder, name, onChange, type}) {
   return (
     <div className="input-wrapper">
       <label htmlFor="plain-teks">{label}</label>
-      <input onChange={onChange} name={name} type={type} placeholder={placeholder} />
+      <input onChange={onChange} name={name} type={type} placeholder={placeholder} autoComplete="off" />
     </div>
   )
 }
