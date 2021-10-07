@@ -48,10 +48,10 @@ export default class App extends Component {
           console.log(abjad[res], "ABJAD RES")
           let encFinal = abjad[res].value;
           arrResult.push(encFinal);
-          return;
         }
+        return true;
       });
-      return;
+      return true;
     });
     
     this.setState({
