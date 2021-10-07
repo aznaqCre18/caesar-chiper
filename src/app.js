@@ -34,6 +34,7 @@ export default class App extends Component {
         } else if(textArr[key] === char.value) {
           let res;
           if(types === 'enc') {
+            console.log('err');
             res = (char.key + Number(this.state.key)) % 26;
           } else if(types === 'dec') {
             if((char.key - Number(this.state.key)) % 26 < 0) {
@@ -58,6 +59,8 @@ export default class App extends Component {
 
   _handleClickEnc = (e) => {
     e.preventDefault();
+
+    this._logicEncDec('enc');
 
     this.setState({
       keyResult: this.state.key,
