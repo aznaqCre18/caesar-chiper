@@ -130,6 +130,7 @@ export default class App extends Component {
           </div>
           <div className="copy">
             <p>Copyright 2021. Aziz Nur Abdul Qodir, All Right Reserved.</p>
+            <a target="_blank" href="https://github.com/aznaqCre18/caesar-chiper">Source Code</a>
           </div>
         </div>
       </React.Fragment>
