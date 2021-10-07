@@ -29,7 +29,7 @@ export default class App extends Component {
     const textArr = text.toLowerCase().split('');
     console.log(textArr)
     textArr.map((item, key) => {
-      abjad.map((char) => {
+      abjad.map(char => {
         if(textArr[key] === ' ') {
           arrResult.push(' ');
         } else if(textArr[key] === char.value) {
@@ -48,8 +48,10 @@ export default class App extends Component {
           console.log(abjad[res], "ABJAD RES")
           let encFinal = abjad[res].value;
           arrResult.push(encFinal);
+          return;
         }
-      })
+      });
+      return;
     });
     
     this.setState({
