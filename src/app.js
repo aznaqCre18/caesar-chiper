@@ -27,7 +27,6 @@ export default class App extends Component {
     const types = type;
 
     const textArr = text.toLowerCase().split('');
-    console.log(textArr)
     textArr.map((item, key) => {
       abjad.map(char => {
         if(textArr[key] === ' ') {
